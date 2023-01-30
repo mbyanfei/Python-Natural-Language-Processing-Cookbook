@@ -1,10 +1,11 @@
+#%%
 import nltk
 from nltk.tokenize import TweetTokenizer
 import time
 import spacy
-
+#%%
 nlp = spacy.load("en_core_web_sm")
-
+#%%
 
 def read_text_file(filename):
     file = open(filename, "r", encoding="utf-8")
@@ -27,10 +28,11 @@ def tokenize_spacy(text):
 
 def tokenize(text):
     return tokenize_spacy(text)
-
+#%%
 
 def main():
-    sherlock_holmes_text = read_text_file("Chapter01/sherlock_holmes_1.txt")
+    # sherlock_holmes_text = read_text_file("Chapter01/sherlock_holmes_1.txt")
+    sherlock_holmes_text = read_text_file("sherlock_holmes_1.txt")
     sherlock_holmes_text = preprocess_text(sherlock_holmes_text)
     words = tokenize(sherlock_holmes_text)
     print(words)
@@ -39,7 +41,7 @@ def main():
         tweet, preserve_case=True, reduce_len=True, strip_handles=True
     )
     print(words)
-
+#%%
 
 if __name__ == "__main__":
     start = time.time()
