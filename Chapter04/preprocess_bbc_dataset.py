@@ -1,3 +1,4 @@
+#%%
 import csv
 import nltk
 import string
@@ -12,7 +13,7 @@ from sklearn.dummy import DummyClassifier
 from sklearn import preprocessing
 from nltk.stem.snowball import SnowballStemmer
 from Chapter01.tokenization import tokenize_nltk
-
+#%%
 stemmer = SnowballStemmer('english')
 bbc_dataset = "Chapter04/bbc-text.csv"
 stopwords_file_path = "Chapter01/stopwords.csv"
